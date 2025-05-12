@@ -10,7 +10,7 @@ import events from '~/assets/Events.json';
 export default function Events() {
   return (
     <>
-      <Stack.Screen options={{ title: 'Events' }} />
+      <Stack.Screen options={{ title: 'Events', headerTintColor: 'black',headerTitleAlign: 'center' }} />
       {/* Event List item */}
       {/* <EventListItem event={events[0]} /> */}
       <FlatList data={events}
