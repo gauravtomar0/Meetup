@@ -10,12 +10,16 @@ import events from '~/assets/Events.json';
 export default function Events() {
   return (
     <>
-      <Stack.Screen options={{ title: 'Events', headerTintColor: 'black',headerTitleAlign: 'center' }} />
+      <Stack.Screen
+        options={{ title: 'Events', headerTintColor: 'black', headerTitleAlign: 'center' }}
+      />
       {/* Event List item */}
       {/* <EventListItem event={events[0]} /> */}
-      <FlatList data={events}
-       renderItem={({ item }) => <EventListItem event={item}  />}
-        className='bg-white'/>
+      <FlatList
+        data={events}
+        renderItem={({ item }) => <EventListItem event={item} />}
+        className="bg-white"
+      />
     </>
   );
 }
