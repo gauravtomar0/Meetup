@@ -30,6 +30,14 @@ export default function EventListItem({ event }) {
           <Feather name="share" size={20} color="gray" />
           <Feather name="bookmark" size={20} color="gray" />
         </View>
+
+        {/* removal code */}
+
+        <View className="flex-row gap-3">
+          <Text className="mr-auto text-gray-700">16 going </Text>
+          <Feather name="share" size={20} color="gray" />
+          <Feather name="bookmark" size={20} color="gray" />
+        </View>
       </Pressable>
     </Link>
   );
