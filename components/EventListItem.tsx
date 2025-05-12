@@ -1,11 +1,13 @@
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image , Pressable} from 'react-native';
 
 import Feather from '@expo/vector-icons/Feather';
 import  dayjs from 'dayjs';
+import { Link } from 'expo-router';
 
 export default function EventListItem({ event }) {
   return (
-    <View className=" gap-3 m-3 pb-3 border-b-2 border-gray-100">
+    <Link href={`/${event.id}`} asChild>
+    <Pressable className=" gap-3 m-3 pb-3 border-b-2 border-gray-100">
       <View className="flex-row ">
         <View className="flex-1 gap-2">
           <Text className="text-lg font-semibold uppercase text-amber-800">
@@ -14,6 +16,8 @@ export default function EventListItem({ event }) {
           <Text className="text-xl font-bold" numberOfLines={2}>
             {event.title}
           </Text>
+
+         
           <Text className="text-gray-700">{event.location}</Text>
         </View>
 
@@ -27,6 +31,7 @@ export default function EventListItem({ event }) {
         <Feather name="share" size={20} color="gray" />
         <Feather name="bookmark" size={20} color="gray" />
       </View>
-    </View>
+    </Pressable>
+    </Link>
   );
 }
